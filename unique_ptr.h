@@ -7,7 +7,7 @@ class UniquePtr {
     T* ptr_;
 
    public:
-    UniquePtr(T* ptr = nullptr) : ptr_(ptr) {}
+    explicit UniquePtr(T* ptr = nullptr) : ptr_(ptr) {}
     ~UniquePtr() {
         if (ptr_) { delete ptr_; }
     }
